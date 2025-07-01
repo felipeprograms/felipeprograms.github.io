@@ -1,0 +1,189 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  line-height: 1.6;
+  transition: background-color 0.4s, color 0.4s;
+}
+
+/* MODOS DE COR */
+body.modo-claro {
+  background: linear-gradient(to right, #f0f0f0, #e0e0e0);
+  color: #333;
+}
+
+body.modo-escuro {
+  background: linear-gradient(to right, #1a1a1a, #2a2a2a);
+  color: #f0f0f0;
+}
+
+/* HEADER */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem;
+  background: linear-gradient(to right, #a4cae4, #0f4478);
+  color: white;
+  position: relative;
+}
+
+.textos-header {
+  flex: 1;
+  padding-left: 1rem;
+}
+
+.foto-header {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 3px solid white;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+#botaoModo {
+  font-size: 1.2rem;
+  padding: 0.4rem 0.7rem;
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+#botaoModo:hover {
+  transform: scale(1.1);
+}
+
+/* CONTAINER */
+main.conteiner {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.perfil,
+.projetos,
+.tecnologias,
+.contatos {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+body.modo-escuro .perfil,
+body.modo-escuro .projetos,
+body.modo-escuro .tecnologias,
+body.modo-escuro .contatos {
+  background-color: #2e2e2e;
+}
+
+/* LINKS E LISTAS */
+ul {
+  list-style: none;
+}
+
+.projetos a {
+  color: #0077cc;
+  font-weight: bold;
+  text-decoration: none;
+  
+}
+.projetos a:hover {
+  text-decoration: underline;
+  
+}
+.tecnologias {
+  background-color: #f0f8ff; /* azul bem claro */
+  border: 2px solid rgb(228, 228, 238);
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-top: 1rem;
+  box-shadow: 0 4px 8px rgba(0,0,255,0.1);
+  transition: transform 0.3s;
+}
+
+.tecnologias:hover {
+  transform: scale(1.01);
+}
+
+body.modo-escuro .projetos a {
+  color: #00aaff;
+}
+
+/* CONTATOS */
+.contatos nav {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.contatos a {
+  background-color: #0077cc;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.contatos a:hover {
+  background-color: #005f99;
+  transform: scale(1.05);
+}
+
+body.modo-escuro .contatos a {
+  background-color: #00aaff;
+}
+
+body.modo-escuro .contatos a:hover {
+  background-color: #0088cc;
+}
+
+/* FOOTER */
+footer {
+  background-color:#a4cae4 ;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+
+/* MODAL IMAGEM */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0,0,0,0.9);
+}
+
+.modal-conteudo {
+  display: block;
+  margin: 10% auto;
+  max-width: 80%;
+  border-radius: 10px;
+}
+
+.fechar {
+  position: absolute;
+  top: 30px;
+  right: 50px;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+}
+
