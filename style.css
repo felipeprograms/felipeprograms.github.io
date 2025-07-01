@@ -1,28 +1,36 @@
-/* RESET */
+/* RESET e BASE             */
+
+/* Remove margens, paddings e ativa box-sizing para todos os elementos */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Define a fonte padrão e uma transição suave nas cores */
 body {
   font-family: "Segoe UI", sans-serif;
   line-height: 1.6;
   transition: background-color 0.4s, color 0.4s;
 }
 
-/* MODOS DE COR */
+/* MODOS DE COR              */
+
+/* Modo Claro: fundo em degradê cinza claro com texto escuro */
 body.modo-claro {
   background: linear-gradient(to right, #f0f0f0, #e0e0e0);
   color: #333;
 }
 
+/* Modo Escuro: fundo escuro com texto claro */
 body.modo-escuro {
   background: linear-gradient(to right, #1a1a1a, #2a2a2a);
   color: #f0f0f0;
 }
 
-/* HEADER */
+/* HEADER (cabeçalho)        */
+
+/* Layout flexível com espaçamento, fundo azul em degradê e texto branco */
 header {
   display: flex;
   align-items: center;
@@ -33,11 +41,13 @@ header {
   position: relative;
 }
 
+/* Texto ao lado da imagem de perfil */
 .textos-header {
   flex: 1;
   padding-left: 1rem;
 }
 
+/* Imagem de perfil arredondada com borda branca */
 .foto-header {
   width: 100px;
   height: 100px;
@@ -47,6 +57,7 @@ header {
   cursor: pointer;
 }
 
+/* Botão do modo escuro/claro */
 #botaoModo {
   font-size: 1.2rem;
   padding: 0.4rem 0.7rem;
@@ -58,11 +69,14 @@ header {
   transition: transform 0.3s;
 }
 
+/* Animação ao passar o mouse sobre o botão */
 #botaoModo:hover {
   transform: scale(1.1);
 }
 
-/* CONTAINER */
+/* CONTAINER PRINCIPAL       */
+
+/* Container geral das seções com espaçamento e colunas */
 main.conteiner {
   padding: 2rem;
   display: flex;
@@ -70,6 +84,7 @@ main.conteiner {
   gap: 2rem;
 }
 
+/* Estilização padrão das seções principais */
 .perfil,
 .projetos,
 .tecnologias,
@@ -80,6 +95,7 @@ main.conteiner {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
+/* Mesma estrutura para modo escuro */
 body.modo-escuro .perfil,
 body.modo-escuro .projetos,
 body.modo-escuro .tecnologias,
@@ -87,24 +103,35 @@ body.modo-escuro .contatos {
   background-color: #2e2e2e;
 }
 
-/* LINKS E LISTAS */
+/* LINKS E LISTAS            */
+
+/* Remove marcadores das listas */
 ul {
   list-style: none;
 }
 
+/* Estilo dos links na seção "Projetos" */
 .projetos a {
   color: #0077cc;
   font-weight: bold;
   text-decoration: none;
-  
 }
+
 .projetos a:hover {
   text-decoration: underline;
-  
 }
+
+/* Links no modo escuro */
+body.modo-escuro .projetos a {
+  color: #00aaff;
+}
+
+/* SEÇÃO: TECNOLOGIAS        */
+
+/* Caixa com fundo azul claro, borda clara e leve sombra */
 .tecnologias {
-  background-color: #f0f8ff; /* azul bem claro */
-  border: 2px solid rgb(228, 228, 238);
+  background-color: #f0f8ff; /* azul suave */
+  border: 2px solid rgb(228, 228, 238); /* azul bem claro */
   border-radius: 10px;
   padding: 1.5rem;
   margin-top: 1rem;
@@ -112,15 +139,15 @@ ul {
   transition: transform 0.3s;
 }
 
+/* Animação leve ao passar o mouse */
+
 .tecnologias:hover {
   transform: scale(1.01);
 }
 
-body.modo-escuro .projetos a {
-  color: #00aaff;
-}
+/* SEÇÃO: CONTATOS           */
 
-/* CONTATOS */
+/* Layout dos links de contato */
 .contatos nav {
   display: flex;
   justify-content: center;
@@ -128,6 +155,7 @@ body.modo-escuro .projetos a {
   flex-wrap: wrap;
 }
 
+/* Estilo dos botões de contato */
 .contatos a {
   background-color: #0077cc;
   color: white;
@@ -137,11 +165,13 @@ body.modo-escuro .projetos a {
   transition: 0.3s;
 }
 
+/* Animação no hover */
 .contatos a:hover {
   background-color: #005f99;
   transform: scale(1.05);
 }
 
+/* Botões no modo escuro */
 body.modo-escuro .contatos a {
   background-color: #00aaff;
 }
@@ -149,17 +179,16 @@ body.modo-escuro .contatos a {
 body.modo-escuro .contatos a:hover {
   background-color: #0088cc;
 }
-
-/* FOOTER */
+/* RODAPÉ (FOOTER)           */
 footer {
-  background-color:#a4cae4 ;
+  background-color: #a4cae4; /* azul claro */
   color: white;
   text-align: center;
   padding: 1rem;
   font-size: 0.9rem;
 }
-
-/* MODAL IMAGEM */
+/* MODAL DE IMAGEM           */
+/* Tela cheia escura ao abrir imagem */
 .modal {
   display: none;
   position: fixed;
@@ -171,6 +200,7 @@ footer {
   background: rgba(0,0,0,0.9);
 }
 
+/* Imagem em destaque */
 .modal-conteudo {
   display: block;
   margin: 10% auto;
@@ -178,6 +208,7 @@ footer {
   border-radius: 10px;
 }
 
+/* Botão para fechar o modal */
 .fechar {
   position: absolute;
   top: 30px;
